@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cUs-s7-uZs">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="千と千尋.gif" translatesAutoresizingMaskIntoConstraints="NO" id="KGC-74-Kvn">
+                                <rect key="frame" x="67" y="60" width="240" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="8wU-vW-hiT"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a0T-Z3-cmH">
+                                <rect key="frame" x="37.5" y="260" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="j3m-qE-ccd"/>
+                                    <constraint firstAttribute="width" constant="300" id="uaE-aN-bmB"/>
+                                </constraints>
+                                <state key="normal" title="gif-&gt;png"/>
+                                <connections>
+                                    <action selector="btnActionGitToPng:" destination="BYZ-38-t0r" eventType="touchUpInside" id="5yF-SP-Fdb"/>
+                                    <segue destination="fWc-NH-U1e" kind="push" id="O9q-mT-Gw7"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Exd-dx-Tn1">
+                                <rect key="frame" x="37.5" y="390" width="300" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="67M-Sv-zEP"/>
+                                    <constraint firstAttribute="height" constant="30" id="tOL-7X-pEA"/>
+                                </constraints>
+                                <state key="normal" title="png-&gt;gif"/>
+                                <connections>
+                                    <action selector="btnActionPngToGif:" destination="BYZ-38-t0r" eventType="touchUpInside" id="GbA-hX-kFm"/>
+                                </connections>
+                            </button>
+                            <webView hidden="YES" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="A9z-JB-cuk">
+                                <rect key="frame" x="67" y="484" width="240" height="128"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="ZZF-Hx-pI1"/>
+                                </constraints>
+                            </webView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="gif-&gt;png路径" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CFA-Q2-oqt">
+                                <rect key="frame" x="0.0" y="290" width="375" height="60"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="DqK-uY-bEf"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="A9z-JB-cuk" secondAttribute="trailing" constant="68" id="3ea-SY-s0C"/>
+                            <constraint firstItem="a0T-Z3-cmH" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="C42-gB-rjA"/>
+                            <constraint firstItem="CFA-Q2-oqt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Oob-mB-OIO"/>
+                            <constraint firstItem="Exd-dx-Tn1" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ROe-fc-VcT"/>
+                            <constraint firstItem="A9z-JB-cuk" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="VZQ-oa-rfV"/>
+                            <constraint firstItem="CFA-Q2-oqt" firstAttribute="top" secondItem="a0T-Z3-cmH" secondAttribute="bottom" id="XDw-SE-Yq2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="A9z-JB-cuk" secondAttribute="bottom" constant="55" id="k2b-IK-iXz"/>
+                            <constraint firstItem="a0T-Z3-cmH" firstAttribute="top" secondItem="KGC-74-Kvn" secondAttribute="bottom" constant="72" id="lN2-EO-JmZ"/>
+                            <constraint firstItem="CFA-Q2-oqt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="mgd-es-ORY"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KGC-74-Kvn" secondAttribute="trailing" constant="68" id="p5X-WK-XtC"/>
+                            <constraint firstItem="KGC-74-Kvn" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="60" id="rdA-gN-yPi"/>
+                            <constraint firstItem="Exd-dx-Tn1" firstAttribute="top" secondItem="a0T-Z3-cmH" secondAttribute="bottom" constant="100" id="vfg-25-Jr6"/>
+                            <constraint firstItem="KGC-74-Kvn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="wZE-zf-xc9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="BW6-9U-PAq"/>
+                    <connections>
+                        <outlet property="textViewGifToPng" destination="CFA-Q2-oqt" id="gft-a2-EEh"/>
+                        <outlet property="webView" destination="A9z-JB-cuk" id="rbv-W3-5fx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2220" y="72"/>
+        </scene>
+        <!--Root View Controller-->
+        <scene sceneID="mI9-yj-smn">
+            <objects>
+                <tableViewController id="fWc-NH-U1e" customClass="TableViewController" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="erl-N1-jty">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="C0X-pQ-TGf">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="C0X-pQ-TGf" id="A0d-hQ-Atu">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="fWc-NH-U1e" id="QUC-6f-4we"/>
+                            <outlet property="delegate" destination="fWc-NH-U1e" id="fqy-Yw-Gex"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Root View Controller" id="vmz-dL-r1I"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1aG-tf-2dg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3111" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="uyo-ar-CCh">
+            <objects>
+                <navigationController id="cUs-s7-uZs" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="pSk-gb-Knh"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Ka5-Md-5od">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="e8r-0J-f2i"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Qs4-Do-bAo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1399" y="72"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="千と千尋.gif" width="500" height="274"/>
+    </resources>
+</document>
