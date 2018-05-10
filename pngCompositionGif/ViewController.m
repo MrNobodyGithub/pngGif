@@ -55,6 +55,7 @@
     _textViewGifToPng.text = pathDocument;
     NSFileManager * fileManager = [NSFileManager defaultManager];
     NSString * dirStr = [pathDocument stringByAppendingString:@"/png"];
+    NSLog(@"---%@---",dirStr);
     [fileManager  createDirectoryAtPath:dirStr withIntermediateDirectories:YES attributes:nil error:nil];
     
     for (int i = 0; i<mutArr.count; i++) {
