@@ -1,0 +1,6 @@
+framework module Pods_PngGif_Example {
+  umbrella header "Pods-PngGif_Example-umbrella.h"
+
+  export *
+  module * { export * }
+}
